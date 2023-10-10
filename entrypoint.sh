@@ -8,6 +8,8 @@ base_path=${INPUT_PATH}
 include_pattern=${INPUT_FILE_MASK}
 workspace="/github/workspace"
 
+git config --global --add safe.directory /github/workspace
+
 cd "$workspace/$base_path" || exit 2
 
 code_style_path="$workspace/.idea/codeStyles/Project.xml"
